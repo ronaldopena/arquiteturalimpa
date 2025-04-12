@@ -1,0 +1,61 @@
+### Variáveis de ambiente
+@baseUrl = http://localhost:3000
+@taskId = {{createTask.response.body.id}}
+
+### Criar uma nova tarefa
+# @name createTask
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+    "description": "Implementar testes da API",
+    "status": "PENDING"
+}
+
+### Listar todas as tarefas
+GET {{baseUrl}}/tasks
+
+### Buscar uma tarefa específica
+GET {{baseUrl}}/tasks/{{taskId}}
+
+### Atualizar uma tarefa
+PUT {{baseUrl}}/tasks/{{taskId}}
+Content-Type: application/json
+
+{
+    "description": "Implementar testes da API - Atualizado",
+    "status": "IN_PROGRESS"
+}
+
+### Atualizar status da tarefa para concluído
+PUT {{baseUrl}}/tasks/{{taskId}}
+Content-Type: application/json
+
+{
+    "description": "Implementar testes da API - Concluído",
+    "status": "COMPLETED"
+}
+
+### Deletar uma tarefa
+DELETE {{baseUrl}}/tasks/{{taskId}}
+
+### Teste de validação - Status inválido
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+    "description": "Teste de validação",
+    "status": "STATUS_INVALIDO"
+}
+
+### Teste de validação - Descrição vazia
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+    "description": "",
+    "status": "PENDING"
+}
+
+### Teste de validação - Buscar tarefa inexistente
+GET {{baseUrl}}/tasks/999999 
