@@ -11,12 +11,12 @@ export class UpdateTaskUseCase {
       throw new TaskNotFoundError(id);
     }
 
-    if (!task.description.trim()) {
+    if (!task.description || !task.description.trim()) {
       throw new InvalidTaskDescriptionError();
     }
 
     const validStatuses: TaskStatus[] = ['PENDING', 'IN_PROGRESS', 'COMPLETED'];
-    if (!validStatuses.includes(task.status)) {
+    if (!task.status || !validStatuses.includes(task.status)) {
       throw new InvalidTaskStatusError(task.status);
     }
 
