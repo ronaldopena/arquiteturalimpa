@@ -13,7 +13,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:e2e": "node scripts/run-e2e.js",
-    "cy:open": "cypress open"
+    "cy:open": "node scripts/open-cypress.js"
   },
   "keywords": [],
   "author": "",
