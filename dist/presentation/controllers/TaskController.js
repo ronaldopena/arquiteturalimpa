@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TaskController = void 0;
-const CreateTaskUseCase_1 = require("../../application/useCases/CreateTaskUseCase");
-const GetTaskByIdUseCase_1 = require("../../application/useCases/GetTaskByIdUseCase");
-const UpdateTaskUseCase_1 = require("../../application/useCases/UpdateTaskUseCase");
-const DeleteTaskUseCase_1 = require("../../application/useCases/DeleteTaskUseCase");
+const CreateTaskUseCase_1 = require("../../application/useCases/task/CreateTaskUseCase");
+const GetTaskByIdUseCase_1 = require("../../application/useCases/task/GetTaskByIdUseCase");
+const UpdateTaskUseCase_1 = require("../../application/useCases/task/UpdateTaskUseCase");
+const DeleteTaskUseCase_1 = require("../../application/useCases/task/DeleteTaskUseCase");
 const PrismaTaskRepository_1 = require("../../infrastructure/repositories/PrismaTaskRepository");
 const TaskErrors_1 = require("../../domain/errors/TaskErrors");
 class TaskController {
