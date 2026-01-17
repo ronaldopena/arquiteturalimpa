@@ -1,6 +1,6 @@
 # API de Gerenciamento de Tarefas
 
-API REST para gerenciamento de tarefas desenvolvida com Node.js, TypeScript e Prisma.
+API REST para gerenciamento de tarefas desenvolvida com Node.js, TypeScript e Prisma com testes unitarios usando jest e prisma.
 
 ## Requisitos
 
