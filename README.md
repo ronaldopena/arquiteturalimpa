@@ -55,3 +55,14 @@ npm start
 ```
 
 Status possíveis: `PENDING`, `IN_PROGRESS`, `COMPLETED`
+
+## Para testar com o cypress
+```bash
+npm run test:e2e
+```
+
+## Para testar com o jest
+```bash
+npm run test
+```
+
